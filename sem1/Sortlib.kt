@@ -56,11 +56,9 @@ fun selectionSort(A: Array<Int>): Unit {
  */
 fun shellSort(A: Array<Int>): Unit {
     var gap = A.size / 2
-
     while (gap > 0) {
         for (i in gap + 1 until A.size) {
             var j = i - gap
-
             while (j > 0) {
                 if (A[j] > A[j + gap]) {
                     swap(A, j, j + gap)
@@ -68,7 +66,6 @@ fun shellSort(A: Array<Int>): Unit {
                 }
                 else {
                     j = -1
-                    break
                 }
             }
         }
